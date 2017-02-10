@@ -9,26 +9,28 @@
     <link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
 </head>
 <body>
-<div id="container">
+<div class="container">
     <header><a href="Welcome-page.html"> <h1>MovieFlix</h1></a></header>
-    <div id="wrapper">
-        <div id="sign-up">
-            <form  autocomplete="on">
+    <section>
+        <div id="container_demo">
+            <div id="wrapper">
+               <div id="sign-up" class="animate form">
+                <form  autocomplete="on">
                 <h1> Sign up </h1>
                 <p>
-                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                    <label for="usernamesignup" class="uname">Your username</label>
                     <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
                 </p>
                 <p>
-                    <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                    <label for="emailsignup" class="youmail" > Your email</label>
                     <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
                 </p>
                 <p>
-                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                    <label for="passwordsignup" class="youpasswd">Your password </label>
                     <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
                 </p>
                 <p>
-                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                    <label for="passwordsignup_confirm" class="youpasswd">Please confirm your password </label>
                     <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                 </p>
                 <p class="signup button">
@@ -40,8 +42,10 @@
                 </p>
             </form>
         </div>
-
     </div>
+    </div>
+    </section>
+</div>
     <footer>
         <div class="footerclass">
             <p class="questions">Questions? Call  <a class="contact" href="#">1-123-456-7890</a>  </p>
