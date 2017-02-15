@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+header h1{
+    font-size:60px;
+    margin:1px 500px 1px 510px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    padding: 12px;
+    background-color: #ff1919;
+    box-sizing: border-box;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+body{
+    /*background: tranparentColor, url("myImage"); */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0, url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0;
+
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%), url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0;
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0.5))), url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0;
+
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0;
+
+    background: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0;
+
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0;
+
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url(https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg) repeat 0 0;
+
+    /* background-image: url("https://s3-eu-west-1.amazonaws.com/poetryschool/assets/uploads/2014/12/19061722/PosterCollage.jpg");*/
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.top-row span{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    background-color: #ff1919;
+    line-height: normal;
+    padding: 7px 27px;
+    font-size: 16px;
+    border-radius: 4px;
+
+}
+.signinbutton{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    float: right;
+    color: #ffffff;
+    background-color: #ff1919;
+    line-height: normal;
+    padding: 7px 17px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.signupbutton{
+    text-decoration: none;
+}
+.footerclass{
+    height: 100%;
+    max-width: 1000px;
+    margin: 30% auto 3% auto;
+    padding-left: 30px;
+    padding-top: 10px;
+    color: white;
+    background-color: #423e3e;
+}
+.footerlist{
+    padding: 0;
+    margin: 0;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+.footerclass ul li{
+    list-style: none;
+    padding: 0 12px 0 0;
+    margin-bottom: 12px;
+    display: inline-block;
+    min-width: 100px;
+    width: 25%;
+    vertical-align: top;
+    direction: ltr;
+    margin-right: 50px;
+
+}
+
+.questions{
+    padding: 0;
+    margin-bottom: 30px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.questions a{
+    text-decoration: none;
+    color: white;
+}
+.questions a:hover{
+    color: lightblue;
+    text-decoration: underline;
+}
+.contact {
+    padding-left: 5px;
+}
+.icons i{
+    padding-right: 5px;
+}
+.icons a{
+    color: white;
+}
+.footerlist a{
+    color: white;
+    text-decoration: none;
+}

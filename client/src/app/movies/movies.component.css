@@ -1,0 +1,132 @@
+body{
+    background-color: #f1f1f1;
+}
+.dropdown{
+    float: right;
+    font-size: 20px;
+    margin: 7px;
+}
+h1{
+    padding-left: 20px;
+    display: inline-block;
+    font-family: 'Bree Serif', serif;
+}
+.btn-secondary {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    margin: 0px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/*
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+.dropdown {
+    position: relative;
+    float: right;
+    margin: 10px;
+    display: inline-block;
+}*/
+/*.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 2px 6px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.show {
+    display:block;
+}*/
+
+
+input.ng-invalid {
+    border-left: 5px solid red !important;
+}
+
+input.ng-valid {
+    border-left: 5px solid green !important;
+}
+
+table{
+    width: 1000px;
+    align-content: center;
+    margin-left: 10%;
+}
+
+.errors p {
+    color: red;
+    margin: 0;
+}
+
+table img {
+    width: 60px;
+    height: 60px;
+}
+.footerclass{
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto 1% auto;
+    padding-top: 40px;
+    color: black;
+}
+.footerlist{
+    padding: 0;
+    margin: 0;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+.footerclass ul li{
+    list-style: none;
+    padding: 0 12px 0 0;
+    margin-bottom: 12px;
+    display: inline-block;
+    min-width: 100px;
+    width: 25%;
+    vertical-align: top;
+    direction: ltr;
+    margin-right: 50px;
+
+}
+
+.questions{
+    padding: 0;
+    margin-bottom: 30px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.questions a{
+    text-decoration: none;
+    color: black;
+}
+.questions a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.contact {
+    padding-left: 5px;
+}
+.icons i{
+    padding-right: 5px;
+}
+.icons a{
+    color: blue;
+}
+.footerlist a{
+    color: black;
+    text-decoration: none;
+}

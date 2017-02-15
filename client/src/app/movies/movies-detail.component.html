@@ -1,0 +1,51 @@
+<body>
+<a [routerLink]="['../']" class="btn btn-primary">&lt; Movies List</a>
+<h1>More about the Movie</h1>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <img [src]="moviesList.poster" *ngIf="moviesList.poster" class="img-responsive">
+    </div>
+    <div class="col-sm-8">
+      <h1><p><b>{{moviesList.title}}</b></p></h1>
+      <p><b>Language:</b>{{moviesList.language}}</p>
+      <p><b>Plot: </b>{{moviesList.plot}}</p>
+      <p><b>Genre:</b>{{moviesList.genre}} </p>
+      <p><b>Director:</b> {{moviesList.director}}</p>
+      <p><b>Writer:</b> {{moviesList.writer}}</p>
+      <p><b>Actors:</b>{{moviesList.actors}}</p>
+      <p><b>Awards:</b> {{moviesList.awards}}</p>
+      <p><b>Type:</b>{{moviesList.type}}</p>
+      <p><b>Country:</b> {{moviesList.country}}</p>
+      <p><b>Metascore:</b>{{moviesList.metaScore}}</p>
+      <p><b>Imdb Rating:</b>{{moviesList.imdbRating}}</p>
+      <p> <a href="http://www.imdb.com/title/{{moviesList.imdbId}}"><button class="btn btn-primary">IMDB</button></a></p>
+    </div>
+</div>
+<div class="comment">
+  <h3>Comments</h3>
+  <textarea style="width:550px; height:70px" id="comments" placeholder="add your comments..."></textarea>
+</div>
+<footer>
+  <div class="footerclass">
+    <p class="questions">Questions? Call  <a class="contact" href="#">1-123-456-7890</a>  </p>
+    <ul class="footerlist">
+      <a href="#"> <li>Help Center</li></a>
+      <a href="#"><li>Account</li></a>
+      <a href="#"><li>Gift Cards</li></a>
+      <a href="#"><li>Privacy</li></a>
+      <a href="#"><li>FAQ</li></a>
+      <a href="#"><li>Terms of Use</li></a>
+    </ul>
+    <div class="icons">
+      <h3>
+        <a href="https://www.facebook.com/"> <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true fa-lg"></i></a>
+        <a href="https://plus.google.com/"><i class="fa fa-google-plus-official" aria-hidden="true fa-lg"></i></a>
+      </h3>
+    </div>
+  </div>
+</footer>
+</body>
+
+

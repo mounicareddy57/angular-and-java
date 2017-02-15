@@ -1,0 +1,59 @@
+<body>
+<div class="container">
+    <header><h1>MovieFlix </h1> </header>
+    <section>
+        <div id="container_demo" >
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    <form (ngSubmit)="loginUser()" autocomplete="on">
+                        <h1>Login</h1>
+                        <p>
+                            <label for="username">Username</label>
+                            <input id="username" [(ngModel)]="user.userName" name="username" required="required" type="text" placeholder="e.g. abcdef"/>
+                        </p>
+                        <p>
+                            <label for="password"> Password </label>
+                            <input id="password" [(ngModel)]="user.password" name="password" required="required" type="password" placeholder="e.g. Gtj9mkO" />
+                        </p>
+                        <p class="keeplogin">
+                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                            <label for="loginkeeping"> Remember me</label>
+                        </p>
+                        <p class="login button">
+                            <input [routerLink]="['movies']" type="submit" value="Login" />
+                        </p>
+
+                        <div class="forgot">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <p class="change_link">
+                            Not a member?
+                            <a routerLink="./signup" routerLinkActive="active" class="to_register">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="footerclass">
+        <p class="questions">Questions? Call  <a class="contact" href="#">1-123-456-7890</a>  </p>
+        <ul class="footerlist">
+            <a href="#"> <li>Help Center</li></a>
+            <a href="#"><li>Account</li></a>
+            <a href="#"><li>Gift Cards</li></a>
+            <a href="#"><li>Privacy</li></a>
+            <a href="#"><li>FAQ</li></a>
+            <a href="#"><li>Terms of Use</li></a>
+        </ul>
+        <div class="icons">
+            <h3>
+                <a href="https://www.facebook.com/"> <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true fa-lg"></i></a>
+                <a href="https://plus.google.com/"><i class="fa fa-google-plus-official" aria-hidden="true fa-lg"></i></a>
+            </h3>
+        </div>
+    </div>
+</footer>
+</body>
