@@ -1,0 +1,199 @@
+package org.mounica.api.entity;
+
+import java.util.List;
+import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table
+@NamedQueries({ 
+	@NamedQuery(name = "Movies.findAll", query = "SELECT e FROM Movies e"),
+	@NamedQuery(name = "Movies.findByTitle", query = "SELECT e FROM Movies e WHERE e.title=:mtitle"),
+	@NamedQuery(name = "Movies.findOneByTitle", query = "SELECT e FROM Movies e WHERE e.title=:mtitle"),
+	@NamedQuery(name = "Movies.findOneByType", query = "SELECT e FROM Movies e WHERE e.type=:mtype"),
+	@NamedQuery(name = "Movies.findOneByYear", query = "SELECT e FROM Movies e WHERE e.year=:myear"),
+	@NamedQuery(name = "Movies.findOneByGenre", query = "SELECT e FROM Movies e WHERE e.genre=:mgenre"),
+})
+public class Movies {
+	
+	@Id
+	private String mid;
+    @Column(unique = true)
+    private String title;
+    private int year;
+    private String genre;
+    private String director;
+    private String writer;
+    private String actors;
+    private String plot;
+    private String language;
+    private String awards;
+    private String poster;
+    private String country;
+    private int metaScore;
+    private String imdbRating;
+    private String imdbVotes;
+    private String imdbId;
+    public String getImdbRating() {
+		return imdbRating;
+	}
+
+	public void setImdbRating(String imdbRating) {
+		this.imdbRating = imdbRating;
+	}
+
+	public String getImdbVotes() {
+		return imdbVotes;
+	}
+
+	public void setImdbVotes(String imdbVotes) {
+		this.imdbVotes = imdbVotes;
+	}
+
+	public String getImdbId() {
+		return imdbId;
+	}
+
+	public void setImdbId(String imdbId) {
+		this.imdbId = imdbId;
+	}
+
+	private String type;
+	
+  
+    @OneToMany
+    private List<Ratings> ratings;
+    
+    @OneToMany
+    @JoinTable(name="movies_comments", 
+    joinColumns=@JoinColumn(name="MID", referencedColumnName="MID"),
+    inverseJoinColumns=@JoinColumn(name="CID", referencedColumnName="CID"))
+    private List<Comments> comments;
+    
+	public Movies(){
+		this.mid= UUID.randomUUID().toString();
+	}
+	
+	public String getMid() {
+		return mid;
+	}
+
+	public void setMid(String mid) {
+		this.mid = mid;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public String getLanguage() {
+		return language;
+	}
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public int getMetaScore() {
+		return metaScore;
+	}
+	public void setMetaScore(int metaScore) {
+		this.metaScore = metaScore;
+	}
+	
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	public String getDirector() {
+		return director;
+	}
+	public void setDirector(String director) {
+		this.director = director;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public List<Ratings> getRatings() {
+		return ratings;
+	}
+
+	public void setRatings(List<Ratings> ratings) {
+		this.ratings = ratings;
+	}
+
+	public List<Comments> getComments() {
+		return comments;
+	}
+	public void setComments(List<Comments> comments) {
+		this.comments = comments;
+	}
+
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+
+	public String getActors() {
+		return actors;
+	}
+
+	public void setActors(String actors) {
+		this.actors = actors;
+	}
+
+	public String getPlot() {
+		return plot;
+	}
+
+	public void setPlot(String plot) {
+		this.plot = plot;
+	}
+
+	public String getAwards() {
+		return awards;
+	}
+
+	public void setAwards(String awards) {
+		this.awards = awards;
+	}
+
+	public String getPoster() {
+		return poster;
+	}
+
+	public void setPoster(String poster) {
+		this.poster = poster;
+	}
+	
+
+}
