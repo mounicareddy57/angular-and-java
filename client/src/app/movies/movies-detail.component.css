@@ -1,0 +1,86 @@
+body{
+  background-color: #f1f1f1;
+}
+h1{
+  margin-left: 10px;
+}
+.row{
+  border: solid black 3px;
+  /*align-content: center;*/
+  margin: 40px;
+}
+.col-sm-4{
+  padding: 2px;
+}
+
+.btn{
+  margin: 15px 0 15px 5px;
+}
+.comment{
+  margin: 32px;
+}
+.forgot a, .change_link a{
+  text-decoration: none;
+}
+
+.forgot a:hover{
+  text-decoration: underline;
+}
+
+.forgot a:visited, .change_link a:visited{
+  color: blue;
+}
+
+.footerclass{
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto 1% auto;
+  padding-top: 40px;
+  color: black;
+}
+.footerlist{
+  padding: 0;
+  margin: 0;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+.footerclass ul li{
+  list-style: none;
+  padding: 0 12px 0 0;
+  margin-bottom: 12px;
+  display: inline-block;
+  min-width: 100px;
+  width: 25%;
+  vertical-align: top;
+  direction: ltr;
+  margin-right: 70px;
+
+}
+
+.questions{
+  padding: 0;
+  margin-bottom: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.questions a{
+  text-decoration: none;
+  color: black;
+}
+.questions a:hover{
+  color: blue;
+  text-decoration: underline;
+}
+.contact {
+  padding-left: 5px;
+}
+.icons i{
+  padding-right: 5px;
+}
+.icons a{
+  color: blue;
+}
+.footerlist a{
+  color: black;
+  text-decoration: none;
+}

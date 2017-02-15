@@ -1,0 +1,69 @@
+<router-outlet xmlns="http://www.w3.org/1999/html"></router-outlet>
+<body>
+<div class="container">
+    <header><a href="Welcome-page.html"> <h1>MovieFlix</h1></a></header>
+    <section>
+        <div id="container_demo">
+            <div id="wrapper">
+                <div id="sign-up" class="animate form">
+                    <form (ngSubmit)="addUser()"  autocomplete="on" novalidate #userForm="ngForm">
+                        <h1> Sign up </h1>
+                        <p>
+                            <label for="userName">Your username</label>
+                            <input #inputUname="ngModel" [(ngModel)]="user.userName" name="userName" required minlength="4" class="form-control" id="userName" type="text" placeholder="myusername57" />
+                        </p>
+                      <div *ngIf="inputUname.errors && inputUname.dirty" class="errors">
+                        <p [hidden] ="!inputUname.errors.required">Username is required</p>
+
+                      </div>
+                      <p>
+                          <label for="email"> Your email</label>
+                          <input #inputEmail="ngModel" [(ngModel)]="user.email" name="email" class="form-control" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required="required" type="<strong>email</strong>" placeholder="mysupermail@mail.com"/>
+                        </p>
+                      <div *ngIf="inputEmail.errors && inputEmail.dirty" class="errors">
+                        <p [hidden] ="!inputEmail.errors.required">Email is required</p>
+                        <p [hidden]="!inputEmail.errors.pattern">Email is invalid </p>
+                      </div>
+                        <p>
+                            <label for="password">Your password </label>
+                            <input #inputPassword="ngModel" id="password" [(ngModel)]="user.password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                        </p>
+                        <p>
+                            <label for="passwordsignup_confirm" class="youpasswd">Please confirm your password </label>
+                            <input id="passwordsignup_confirm" [(ngModel)]="user.passwordc" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                        </p>
+                        <p class="signup button">
+                            <input type="submit" value="Sign up"/>
+                        </p>
+                        <p class="change_link">
+                            Already a member ?
+                            <a href="login.html" class="to_register"> Log in </a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="footerclass">
+        <p class="questions">Questions? Call  <a class="contact" href="#">1-123-456-7890</a>  </p>
+        <ul class="footerlist">
+            <a href="#"> <li>Help Center</li></a>
+            <a href="Login.html"><li>Account</li></a>
+            <a href="#"><li>Gift Cards</li></a>
+            <a href="#"> <li>Privacy</li></a>
+            <a href="#"> <li>FAQ</li></a>
+            <a href="#"> <li>Terms of Use</li></a>
+        </ul>
+        <div class="icons">
+            <h3>
+                <a href="https://www.facebook.com/"> <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true fa-lg"></i></a>
+                <a href="https://plus.google.com/"><i class="fa fa-google-plus-official" aria-hidden="true fa-lg"></i></a>
+            </h3>
+        </div>
+    </div>
+</footer>
+</body>
+

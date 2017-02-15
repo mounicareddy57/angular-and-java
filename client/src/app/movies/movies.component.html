@@ -1,0 +1,65 @@
+<router-outlet></router-outlet>
+<body>
+<nav>
+  <h1>MovieFlix</h1>
+  <div class="dropdown">
+    Welcome <span> user </span>
+    <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Log out
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Account</a>
+        <a class="dropdown-item" href="#">Privacy</a>
+        <a class="dropdown-item" href="#">Log out</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<label for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
+<input id="search" [(ngModel)]="title" name="search" class="search" type="search" placeholder="search">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Poster</th>
+      <th>Title</th>
+      <th>Language</th>
+      <th>Director</th>
+      <th>Type</th>
+      <th>Metascore</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let movies of moviesList | filter: title">
+    <td><a [routerLink]="[movies.mid]"><img [src]="movies.poster"></a></td>
+    <td>{{movies.title}}</td>
+    <td>{{movies.language}}</td>
+    <td>{{movies.director}}</td>
+    <td>{{movies.type}}</td>
+    <td>{{movies.metaScore}}</td>
+  </tr>
+  </tbody>
+</table>
+<footer>
+  <div class="footerclass">
+    <p class="questions">Questions? Call  <a class="contact" href="#">1-123-456-7890</a>  </p>
+    <ul class="footerlist">
+      <a href="#"> <li>Help Center</li></a>
+      <a href="Login.html"><li>Account</li></a>
+      <a href="#"><li>Gift Cards</li></a>
+      <a href="#"> <li>Privacy</li></a>
+      <a href="#"> <li>FAQ</li></a>
+      <a href="#"> <li>Terms of Use</li></a>
+    </ul>
+    <div class="icons">
+      <h3>
+        <a href="https://www.facebook.com/"> <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true fa-lg"></i></a>
+        <a href="https://plus.google.com/"><i class="fa fa-google-plus-official" aria-hidden="true fa-lg"></i></a>
+      </h3>
+    </div>
+  </div>
+</footer>
+</body>
