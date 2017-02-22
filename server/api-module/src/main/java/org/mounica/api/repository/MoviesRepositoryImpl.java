@@ -101,12 +101,6 @@ public class MoviesRepositoryImpl implements MoviesRepository {
 	public void delete(Movies mov) {
 		em.remove(mov);
 	}
-
-	/*@Override
-	public Movies findByTitle(String title) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
 	
 
 }

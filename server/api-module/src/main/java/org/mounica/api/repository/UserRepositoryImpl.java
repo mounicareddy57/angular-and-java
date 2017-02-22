@@ -20,6 +20,7 @@ public class UserRepositoryImpl implements UserRepository {
 		TypedQuery<User> query = em.createNamedQuery("User.findAll", User.class);
 		return query.getResultList();
 	}
+	
 
 	@Override
 	public User findOne(String id) {
