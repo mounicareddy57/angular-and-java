@@ -6,7 +6,7 @@
     Welcome <span> user </span>
     <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+      <button class="btn btn-secondary dropdown-toggle" (click)="LogOut()" type="button" id="dropdownMenuButton"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Log out
       </button>
@@ -20,6 +20,9 @@
 </nav>
 <label for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
 <input id="search" [(ngModel)]="title" name="search" class="search" type="search" placeholder="search">
+<div class="col-md-2 col-md-offset-2">
+  <a *ngIf="Admin" [routerLink]="['../movies/create']" class="btn btn-primary">Create New Movie</a>
+</div>
 <table class="table">
   <thead>
     <tr>

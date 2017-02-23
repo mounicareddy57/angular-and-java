@@ -5,23 +5,30 @@
         <div id="container_demo" >
             <div id="wrapper">
                 <div id="login" class="animate form">
-                    <form (ngSubmit)="loginUser()" autocomplete="on">
+                    <form (ngSubmit)="loginUser()" autocomplete="on" #loginForm="ngForm" novalidate>
                         <h1>Login</h1>
-                        <p>
+                      <div class="form-group">
                             <label for="username">Username</label>
-                            <input id="username" [(ngModel)]="user.userName" name="username" required="required" type="text" placeholder="e.g. abcdef"/>
-                        </p>
-                        <p>
+                            <input #inputUsername="ngModel" id="username" [(ngModel)]="user.email" name="username" required="required" type="text" placeholder="e.g. abcdef"/>
+                        <div *ngIf="inputUsername.errors && inputUsername.dirty" class="errors">
+                        <p [hidden]="!inputUsername.errors.required">Email is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
                             <label for="password"> Password </label>
-                            <input id="password" [(ngModel)]="user.password" name="password" required="required" type="password" placeholder="e.g. Gtj9mkO" />
-                        </p>
+                            <input #inputPassword="ngModel" id="password" [(ngModel)]="user.password" name="password" required="required" type="password" placeholder="e.g. Gtj9mkO" />
+                        <div *ngIf="inputPassword.errors && inputPassword.dirty" class="errors">
+                          <p [hidden]="!inputPassword.errors.required">Please Enter Password</p>
+                        </div>
+                      </div>
                         <p class="keeplogin">
                             <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
                             <label for="loginkeeping"> Remember me</label>
                         </p>
                         <p class="login button">
-                            <input [routerLink]="['movies']" type="submit" value="Login" />
+                            <input type="submit" value="Login" />
                         </p>
+                      <!--[routerLink]="['movies']"-->
 
                         <div class="forgot">
                             <a href="#">Forgot password?</a>

@@ -6,32 +6,39 @@
         <div id="container_demo">
             <div id="wrapper">
                 <div id="sign-up" class="animate form">
-                    <form (ngSubmit)="addUser()"  autocomplete="on" novalidate #userForm="ngForm">
+                    <form (ngSubmit)="addUser()" autocomplete="on" novalidate #userForm="ngForm">
                         <h1> Sign up </h1>
-                        <p>
+                        <div class="form-group">
                             <label for="userName">Your username</label>
                             <input #inputUname="ngModel" [(ngModel)]="user.userName" name="userName" required minlength="4" class="form-control" id="userName" type="text" placeholder="myusername57" />
-                        </p>
                       <div *ngIf="inputUname.errors && inputUname.dirty" class="errors">
                         <p [hidden] ="!inputUname.errors.required">Username is required</p>
-
                       </div>
-                      <p>
+                        </div>
+                      <div class="form-group">
                           <label for="email"> Your email</label>
                           <input #inputEmail="ngModel" [(ngModel)]="user.email" name="email" class="form-control" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required="required" type="<strong>email</strong>" placeholder="mysupermail@mail.com"/>
-                        </p>
                       <div *ngIf="inputEmail.errors && inputEmail.dirty" class="errors">
                         <p [hidden] ="!inputEmail.errors.required">Email is required</p>
                         <p [hidden]="!inputEmail.errors.pattern">Email is invalid </p>
                       </div>
-                        <p>
+                      </div>
+                        <div class="form-group">
                             <label for="password">Your password </label>
                             <input #inputPassword="ngModel" id="password" [(ngModel)]="user.password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
-                        </p>
-                        <p>
+                          <div *ngIf="inputPassword.errors && inputPassword.dirty" class="errors">
+                      <p [hidden]="!inputPassword.errors.required">Password is required</p>
+                      <p [hidden]="!inputPassword.errors.minlength">Password must have 6 chars or more</p>
+                         </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="passwordsignup_confirm" class="youpasswd">Please confirm your password </label>
-                            <input id="passwordsignup_confirm" [(ngModel)]="user.passwordc" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
-                        </p>
+                            <input #inputPasswordc="ngModel" id="passwordsignup_confirm" [(ngModel)]="user.passwordc" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                          <span *ngIf="!inputPasswordc.valid" class="help-block text-danger">
+                          <div *ngIf="inputPasswordc?.errors?.areEqual">The two passwords aren't the same</div>
+                          </span>
+                        </div>
                         <p class="signup button">
                             <input type="submit" value="Sign up"/>
                         </p>
