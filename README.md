@@ -1,7 +1,10 @@
 # movieflix
-Full-Stack training project: movieflix
+Full-Stack project: movieflix
 
-## directory structure:
+## technology stack
+Angular2, Node.js, Java, SpringMVC, Hibernate, MySQL   
+
+### directory structure:
 
 **`client`** [*module-complete*]: contains ui app (HTML, CSS, JS, fonts, images)   
 **`layout`** [*module-layout*]: contains layout related files (CSS, HTML).     
