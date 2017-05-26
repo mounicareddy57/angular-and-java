@@ -2,7 +2,7 @@
 Full-Stack project: movieflix
 
 ## technology stack
-Angular2, Node.js, Java, SpringMVC, Hibernate, MySQL   
+Angular2, TypeScript, Node.js, Java, SpringMVC, Hibernate, MySQL   
 
 ### directory structure:
 
