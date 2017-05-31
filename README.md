@@ -1,5 +1,5 @@
-# movieflix
-Full-Stack project: movieflix
+# Angular-And-Java
+Full-Stack project
 
 ## technology stack
 Angular2, TypeScript, Node.js, Java, SpringMVC, Hibernate, MySQL   
