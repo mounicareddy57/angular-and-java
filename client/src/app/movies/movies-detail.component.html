@@ -21,10 +21,29 @@
       <p><b>Imdb Rating:</b>{{moviesList.imdbRating}}</p>
       <p> <a href="http://www.imdb.com/title/{{moviesList.imdbId}}"><button class="btn btn-primary">IMDB</button></a></p>
     </div>
+
+  <div class="col-md-6">
+    <div class="col-md-6"><button type="button" *ngIf="isAdmin" (click)="deleteMovies()" [routerLink]="['../']" class="btn btn-danger" id="btnDeleteMovie">Delete</button></div>
+    <div class="col-md-6"><a  *ngIf="isAdmin" [routerLink]="['../edit',moviesList.mid]" class="btn btn-primary">Edit</a></div>
+  </div>
 </div>
+
 <div class="comment">
+  <form (ngSubmit)="addComment()">
+    <div class="form-group">
   <h3>Comments</h3>
-  <textarea style="width:550px; height:70px" id="comments" placeholder="add your comments..."></textarea>
+  <textarea class="form-control" #inputReview ="ngModel" name="reviewText" [(ngModel)]="comments.comment" style="width:550px; height:70px" id="comments" placeholder="add your comments..."></textarea>
+    <button type="submit">Comment</button>
+    </div>
+  </form>
+</div>
+<div>
+  <label>Your rating</label>
+  <p-rating name="reviewRate" [(ngModel)]="comments.comment"></p-rating>
+</div>
+<div class="panel panel-default">
+<div class="col-md-3"><label for="usercomment">User Comments:</label> </div>
+<div class="col-md-9" id="usercomment">{{comments.comment}}</div>
 </div>
 <footer>
   <div class="footerclass">

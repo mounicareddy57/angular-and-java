@@ -1,0 +1,121 @@
+<div class="container" style="background-color: #f1f1f1">
+<a [routerLink]="['../']" class="btn btn-primary">&lt; Back</a>
+<h1 class="col-md-12 well">Enter Movie Details</h1>
+<div class="form-group"><hr></div>
+<div class="container-fluid">
+  <div class="row well">
+
+    <form (ngSubmit)="createMovies()" novalidate #createMovieForm="ngForm">
+      <div class="col-md-6">
+
+        <div class="row">
+          <div class="row">
+            <div class="col-md-3"><label for="poster">Poster Link</label> </div>
+            <div class="col-md-9" id="poster">
+              <input #inputPoster="ngModel" type="text" name="poster" [(ngModel)]="moviesList.poster" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="title">Title</label> </div>
+            <div class="col-md-9" id="title">
+              <input #inputActor="ngModel" type="text" name="title" [(ngModel)]="moviesList.title" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="actors">Actors</label> </div>
+            <div class="col-md-9" id="actors">
+              <input #inputActor="ngModel" type="text" name="actors" [(ngModel)]="moviesList.actors" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="director">Director</label> </div>
+            <div class="col-md-9" id="director">
+              <input #inputDirector="ngModel" type="text" name="director" [(ngModel)]="moviesList.director" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="writer">Writer</label> </div>
+            <div class="col-md-9" id="writer">
+              <input #inputWriter="ngModel" type="text" name="writer" [(ngModel)]="moviesList.writer" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="year">Year</label> </div>
+            <div class="col-md-9" id="year">
+              <input #inputYear="ngModel" type="text" name="year" [(ngModel)]="moviesList.year" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="genre">Genre</label> </div>
+            <div class="col-md-9" id="genre">
+              <input #inputGenre="ngModel" type="text" name="genre" [(ngModel)]="moviesList.genre" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="language">Language</label> </div>
+            <div class="col-md-9" id="language">
+              <input #inputLanguage="ngModel" type="text" name="language" [(ngModel)]="moviesList.language" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="country">Country</label> </div>
+            <div class="col-md-9" id="country">
+              <input #inputCountry="ngModel" type="text" name="country" [(ngModel)]="moviesList.country" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="award">Awards</label> </div>
+            <div class="col-md-9" id="award">
+              <input #inputAward="ngModel" type="text" name="award" [(ngModel)]="moviesList.awards" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="plot">Plot</label> </div>
+            <div class="col-md-9" id="plot">
+              <input #inputPlot="ngModel" type="text" name="plot" [(ngModel)]="moviesList.plot" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="imdbid">Imdb Id</label> </div>
+            <div class="col-md-9" id="imdbid">
+              <input #inputImdbId="ngModel" type="text" name="imdbId" [(ngModel)]="moviesList.imdbId" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="imdbrating">Imdb Rating</label> </div>
+            <div class="col-md-9" id="imdbrating">
+              <input #inputImdbRating="ngModel" type="text" name="imdbRating" [(ngModel)]="moviesList.imdbRating" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="imdbvotes">Imdb Votes</label> </div>
+            <div class="col-md-9" id="imdbvotes">
+              <input #inputImdbVotes="ngModel" type="text" name="imdbVotes" [(ngModel)]="moviesList.imdbVotes" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="metascore">MetaScore</label> </div>
+            <div class="col-md-9" id="metascore">
+              <input #inputMetascore="ngModel" type="text" name="metaScore" [(ngModel)]="moviesList.metaScore" required class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><label for="type">Type</label> </div>
+            <div class="col-md-9" id="type">
+              <input #inputType="ngModel" type="text" name="type" [(ngModel)]="moviesList.type" required class="form-control">
+            </div>
+          </div>
+          <div class="row"><br></div>
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-primary">Create Movie</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </form>
+    <hr>
+  </div>
+</div>
+</div>

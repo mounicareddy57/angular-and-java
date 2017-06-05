@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers, RequestOptions} from "@angular/http";
 import { Observable } from "rxjs/Observable";
+import {AuthenticationService} from "app/user/user-authentication.service";
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
@@ -8,10 +9,13 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class MoviesService {
 
-  constructor(private http: Http)
+  constructor(private http: Http, private authenticationService: AuthenticationService)
   {}
     getMovies(): Observable<any[]> {
-     return this.http.get('http://localhost:8080/api-module/api/movies')
+      let headers = new Headers();
+      headers.append('Authorization', 'Basic '+this.authenticationService.token);
+      let options = new RequestOptions({ headers: headers });
+     return this.http.get('http://localhost:8080/api-module/api/movies', options)
                      .map(response => response.json())
                      .catch(error => Observable.throw(error.statusText));
   }
@@ -48,9 +52,9 @@ export class MoviesService {
 
   }
     createMovies(mov: any): Observable<any[]> {
-        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let headers = new Headers({ 'Content-Type': 'application/json' ,'Authorization': 'Bearer ' + this.authenticationService.token});
         let options = new RequestOptions({ headers: headers });
-        return this.http.get('http://localhost:8080/api-module/api/movies',mov)
+        return this.http.post('http://localhost:8080/api-module/api/movies',mov, options)
             .map(response => response.json())
             .catch(error => Observable.throw(error.statusText));
     }
@@ -58,8 +62,15 @@ export class MoviesService {
     updateMovies(id: String, mov:any): Observable<any[]> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        return this.http.get(`http://localhost:8080/api-module/api/movies/${id}`,mov)
+        return this.http.put(`http://localhost:8080/api-module/api/movies/${id}`,mov)
             .map(response => response.json())
             .catch(error => Observable.throw(error.statusText));
     }
+  deleteMovies(id: string, movie: any): Observable<any[]> {
+    let headers = new Headers({'Content-Type': 'application/json', 'Authorization': 'Bearer' + this.authenticationService.token});
+    let options = new RequestOptions({headers: headers});
+    return this.http.delete(`http://localhost:8080/api-module/api/movies/${id}`, options)
+      .map(response => response.json())
+      .catch(error => Observable.throw(error.statusText));
+  }
 }
